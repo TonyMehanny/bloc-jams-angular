@@ -1,14 +1,9 @@
-(function() {
-    function Fixtures() {
-        var Fixtures = {};
-
-
 var albumPicasso = {
   title: 'The Colors',
   artist: 'Pablo Picasso',
   label: 'Cubism',
   year: '1881',
-  albumArtUrl: '/assets/images/album_covers/07.png',
+  albumArtUrl: 'assets/images/album_covers/07.png',
   songs: [
     { title: 'Blue', duration: 161.71, audioUrl: 'assets/music/blue' },
     { title: 'Green', duration: 103.96, audioUrl: 'assets/music/green' },
@@ -24,7 +19,7 @@ var albumMarconi = {
     artist: 'Guglielmo Marconi',
     label: 'EM',
     year: '1909',
-    albumArtUrl: '/assets/images/album_covers/09.png',
+    albumArtUrl: 'assets/images/album_covers/09.png',
     songs: [
         { title: 'Hello, Operator?', duration: '1:01' },
         { title: 'Ring, ring, ring', duration: '5:01' },
@@ -40,7 +35,7 @@ var albumDrake = {
     artist: 'Drake',
     label: 'OVO',
     year: '2017',
-    albumArtUrl: '/assets/images/album_covers/08.png',
+    albumArtUrl: 'assets/images/album_covers/08.png',
     songs: [
         { title: 'Free Smoke', duration: '1:01' },
         { title: 'No Long Talk', duration: '5:01' },
@@ -49,15 +44,3 @@ var albumDrake = {
         { title: 'Blem', duration: '2:15'}
     ]
 };
-
-  Fixtures.getAlbum = function() {
-         return albumPicasso;
-     };
-
-return Fixtures;
-}
-
-angular
-.module('blocJams')
-.factory('Fixtures', Fixtures);
-})();

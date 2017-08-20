@@ -22,7 +22,7 @@
       scope: { },
       link: function(scope, element, attributes) {
         // directive logic to return
-        scope.value = 0;
+        scope.value = 20;
         scope.max = 100;
 
         /**
@@ -51,6 +51,19 @@
         scope.fillStyle = function() {
           return {width: percentString()};
         };
+
+
+
+        /**
+        * @function thumbStyle method
+        * @desc Updates position of seek bar thumbStyle
+        * @returns {function}
+        */
+        scope.thumbStyle = function() {
+            return { left: percentString() };
+        };
+
+
 
         /**
         * @function onClickSeekBar method

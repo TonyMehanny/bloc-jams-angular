@@ -32,7 +32,7 @@
       /**
       * @function .bind
       * @desc Applies time once we know which song to play
-      * @param 
+      * @param
       */
       currentBuzzObject.bind('timeupdate', function() {
         $rootScope.$apply(function() {
@@ -85,6 +85,12 @@
     * @type {Number}
     */
     SongPlayer.currentTime = null;
+
+    /**
+    * @desc attribute to hold value of volume
+    * @type {Number}
+    */
+    SongPlayer.volume = 20;
 
     /**
     * @function SongPlayer.play method
@@ -160,6 +166,19 @@
         currentBuzzObject.setTime(time);
       }
     };
+
+
+    /**
+    * @function setVolume
+    * @desc Method to update the volumn on change
+    * @param
+    */
+    SongPlayer.setVolume = function(volume) {
+      if(currentBuzzObject) {
+        currentBuzzObject.setVolume(volume);
+      }
+    };
+
 
     return SongPlayer;
   }
